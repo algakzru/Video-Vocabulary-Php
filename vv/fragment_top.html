@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- http://stevesanderson.github.io/fixed-height-layouts-demo/two-columns.html -->
+<html>
+    <head>
+		<title>Video Vocabulary</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="vv/panes.css" rel="stylesheet" type="text/css" />
+        <link href="vv/tablet.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            /* Pane configuration */
+            .left.col { width: 250px; }
+            .right.col { left: 250px; right: 0; }
+            .header.row { height: 75px; line-height: 75px; text-align: center }
+            .body.row { top: 75px; bottom:0px; }
+            .footer.row { height: 50px; bottom: 0; line-height: 50px; text-align: center; }
+        </style>
+    </head>
+    <body>
+        <div class="left col">
+            <div class="header row" id="divWordlist"></div>
+            <div class="body row scroll-y">
+                <ul class="listview" id="words"></ul>
+            </div>
+        </div>
+        <div class="right col">
+            <div class="header row" id="divTitle"></div>
+            <div class="body row" style="padding: 0; margin: 0">
+                <div id="videobox" class="outer" style="height:100%; width: 100%; display: none;">
+					<span class="inner">
+					<ul class='listview inset'>
+						<li><table width=100%><tr>
+							<td><button type='button' id="btnDelete">Delete</button></td>
+							<td><span id="selectVideos" style='text-align: center'></span></td>
+							<td><button type='button' id="btnEdit">Edit</button></td>
+							</tr></table>
+						</li>
+						<li><iframe id="player" height=576 width=720 src="http://player.youku.com/embed/XMTMxNDc4NDIzNg==" frameborder=0 allowfullscreen></iframe></li>
+					</ul>
+					</span>
+                </div>
+                <div class="outer" style="height:100%; width: 100%;">
+                    <H3 class="inner" id="span_info">Select a word from the list</H3>
+                </div>
+            </div>
+        </div>
+

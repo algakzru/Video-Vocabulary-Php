@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!-- http://stevesanderson.github.io/fixed-height-layouts-demo/two-columns.html -->
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="http://arreke.ucoz.net/vv/panes.css" rel="stylesheet" type="text/css" />
+        <link href="http://arreke.ucoz.net/vv/tablet.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            /* Pane configuration */
+            .left.col { width: 250px; }
+            .right.col { left: 250px; right: 0; }
+            .header.row { height: 75px; line-height: 75px; text-align: center }
+            .body.row { top: 75px; bottom: 50px; }
+            .footer.row { height: 50px; bottom: 0; line-height: 50px; text-align: center }
+        </style>
+    </head>
+    <body>
+        <div class="left col">
+            <div class="header row">
+                锦绣华南（HSK6）
+            </div>
+            <div class="body row scroll-y">
+				<ul class="listview" id="words">
+					<li id="item0">延续</li>
+					<li id="item1">种植</li>
+					<li id="item2">生存</li>
+					<li id="item3">渔民</li>
+					<li id="item4">漫长</li>
+					<li id="item5">陡峭</li>
+					<li id="item6">巢穴</li>
+					<li id="item7">意味着</li>
+					<li id="item8">覆盖</li>
+					<li id="item9">海拔</li>
+					<li id="item10">延伸</li>
+					<li id="item11">穿越</li>
+					<li id="item12">平原</li>
+					<li id="item13">忙碌</li>
+					<li id="item14">坡</li>
+					<li id="item15">降临</li>
+					<li id="item16">播种</li>
+					<li id="item17">坚硬</li>
+					<li id="item18">形态</li>
+					<li id="item19">岩石</li>
+					<li id="item20">溶解</li>
+					<li id="item21">时光</li>
+					<li id="item22">居住</li>
+					<li id="item23">饲养</li>
+					<li id="item24">来源</li>
+					<li id="item25">踪迹</li>
+					<li id="item26">耸</li>
+					<li id="item27">神奇</li>
+					<li id="item28">炎热</li>
+					<li id="item29">娃娃</li>
+					<li id="item30">珍稀</li>
+					<li id="item31">溪</li>
+					<li id="item32">家伙</li>
+					<li id="item33">和谐</li>
+					<li id="item34">生机</li>
+					<li id="item35">辽阔</li>
+					<li id="item36">守护</li>
+					<li id="item37">炫耀</li>
+					<li id="item38">震撼</li>
+					<li id="item39">庞大</li>
+					<li id="item40">山脉</li>
+					<li id="item41">居民</li>
+					<li id="item42">孕育</li>
+					<li id="item43">祖先</li>
+					<li id="item44">原始</li>
+					<li id="item45">玉</li>
+					<li id="item46">壮丽</li>
+					<li id="item47">举动</li>
+					<li id="item48">仪式</li>
+					<li id="item49">场面</li>
+					<li id="item50">即便</li>
+					<li id="item51">依旧</li>
+					<li id="item52">中央</li>
+					<li id="item53">肥沃</li>
+					<li id="item54">赋予</li>
+					<li id="item55">敞开</li>
+					<li id="item56">勤劳</li>
+					<li id="item57">人为</li>
+					<li id="item58">无忧无虑</li>
+					<li id="item59">依赖</li>
+					<li id="item60">区域</li>
+					<li id="item61">地质</li>
+					<li id="item62">典型</li>
+					<li id="item63">极限</li>
+					<li id="item64">凝固</li>
+					<li id="item65">探索</li>
+					<li id="item66">永恒</li>
+					<li id="item67">生物</li>
+					<li id="item68">隧道</li>
+					<li id="item69">观光</li>
+					<li id="item70">标记</li>
+					<li id="item71">保障</li>
+					<li id="item72">尝试</li>
+					<li id="item73">迁徙</li>
+					<li id="item74">技巧</li>
+					<li id="item75">领袖</li>
+					<li id="item76">危机</li>
+					<li id="item77">诱惑</li>
+					<li id="item78">人家</li>
+					<li id="item79">牲畜</li>
+					<li id="item80">筐</li>
+					<li id="item81">笼罩</li>
+					<li id="item82">苏醒</li>
+					<li id="item83">反射</li>
+					<li id="item84">捕捉</li>
+					<li id="item85">惊奇</li>
+					<li id="item86">清澈</li>
+					<li id="item87">曲折</li>
+					<li id="item88">防止</li>
+					<li id="item89">激励</li>
+					<li id="item90">迈</li>
+					<li id="item91">复活</li>
+					<li id="item92">奖励</li>
+					<li id="item93">喂</li>
+					<li id="item94">封闭</li>
+					<li id="item95">铺</li>
+					<li id="item96">捞</li>
+					<li id="item97">打包</li>
+					<li id="item98">繁殖</li>
+					<li id="item99">晾</li>
+					<li id="item100">婴儿</li>
+					<li id="item101">公认</li>
+					<li id="item102">攻克</li>
+					<li id="item103">人工</li>
+					<li id="item104">依靠</li>
+					<li id="item105">迫不及待</li>
+					<li id="item106">边缘</li>
+					<li id="item107">耗费</li>
+					<li id="item108">持久</li>
+					<li id="item109">坚韧</li>
+					<li id="item110">后代</li>
+					<li id="item111">起初</li>
+					<li id="item112">动手</li>
+					<li id="item113">见多识广</li>
+					<li id="item114">在意</li>
+					<li id="item115">解除</li>
+					<li id="item116">杂交</li>
+					<li id="item117">扑</li>
+					<li id="item118">翼</li>
+					<li id="item119">惦记</li>
+					<li id="item120">罕见</li>
+					<li id="item121">生态</li>
+					<li id="item122">即将</li>
+					<li id="item123">遥远</li>
+					<li id="item124">北极</li>
+					<li id="item125">濒临</li>
+					<li id="item126">出路</li>
+				</ul>
+				
+            </div>
+            <div class="footer row">
+                <!-- Icons go here -->
+            </div>
+        </div>
+        <div class="right col">
+            <div class="header row" id="divTitle">
+                
+            </div>
+            <div class="body row" style="padding: 0; margin: 0">
+                <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+                <div id="videobox" style="width: 100%; height: 100%; display: none;">
+                <div id="player" ></div>
+                </div>
+                <div class="outer" style="height:100%; width: 100%;">
+                    <H3 class="inner" id="span_info">Select a word from the list</H3>
+                </div>
+            </div>
+            <div class="footer row">
+                Created by Video Vocabulary
+            </div>
+        </div>
+        
+        <script>
+			// 2. This code loads the IFrame Player API code asynchronously.
+			var tag = document.createElement('script');
+
+			tag.src = "https://www.youtube.com/iframe_api";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+			// 3. This function creates an <iframe> (and YouTube player)
+			//    after the API code downloads.
+			var player;
+			var youTubeIframeAPIReady = false;
+			function onYouTubeIframeAPIReady() {
+				player = new YT.Player('player', {
+					height: '100%',
+					width: '100%',
+					videoId: '',
+					events: {
+						'onReady': onPlayerReady,
+						'onStateChange': onPlayerStateChange
+					}
+				});
+				youTubeIframeAPIReady = true;
+			}
+
+			// 4. The API will call this function when the video player is ready.
+			function onPlayerReady(event) {
+				//event.target.cuePlaylist(["VM4WqfBQ92I","x7x0LzNrIl4"], 0, 0, "large");
+				//event.target.playVideo();
+			}
+
+			// 5. The API calls this function when the player's state changes.
+			//    The function indicates that when playing a video (state=1),
+			//    the player should play for six seconds and then stop.
+			var done = false;
+			function onPlayerStateChange(event) {
+				if (event.data == YT.PlayerState.PLAYING && !done) {
+					//setTimeout(stopVideo, 6000);
+					done = true;
+				}	
+			}
+			function stopVideo() {
+				player.stopVideo();
+			}
+		</script>
+
+        <script type="text/javascript">
+            // Conditional CSS for IEMobile (http://blogs.msdn.com/b/iemobile/archive/2010/12/08/targeting-mobile-optimized-css-at-windows-phone-7.aspx)
+            // doesn't seem to work on WP7.5 (Mango) emulator, so use useragent-based detection instead
+            if (navigator.userAgent.indexOf("IEMobile") >= 0) {
+                document.body.className += " iemobile";
+                window.onscroll = function () { window.scroll(0, 0) }
+            }
+            
+            // IE does not know about the target attribute. It looks for srcElement
+            // This function will get the event target in a browser-compatible way
+            function getEventTarget(e) {
+                e = e || window.event;
+                return e.target || e.srcElement; 
+            }
+
+            var ul = document.getElementById('words');
+            ul.onclick = function(event) {
+                var target = getEventTarget(event);
+                document.getElementById('divTitle').innerHTML = target.innerHTML;
+                if (selected_li != null) {
+                    selected_li.className = "";
+                }
+                selected_li = target;
+                selected_li.className = "selected";
+                setVideos(target.id.substring(4));
+            };
+            
+            function setVideos(index) {
+                //player.style.visibility = "visible";
+                if (youTubeIframeAPIReady) {
+                    player.setShuffle(true);
+                    player.loadPlaylist(words[index].videos, 0, 0, "large");
+                    player.setShuffle(true);
+                } else document.getElementById("span_info").innerHTML = "Can't load https://www.youtube.com/iframe_api";
+                
+                document.getElementById("videobox").style.display = "block";
+            }
+            
+            var selected_li = null;
+            var words = [];
+			words.push( {word:'延续', videos:["XMTMxMDQ3Mjg2MA==","XMTMxMTAxNzQzNg==","XMTMxMTc3ODkwMA==","XMTMxMTk3MzcyOA==","XMTMxMjQxMzcwNA==","XMTMxNDIxMDIzNg==","XMTMxNDcwODk1Ng=="]} );
+			words.push( {word:'种植', videos:["XMTMxMTA4NTAyNA==","XMTMxMTgwNzE1Ng==","XMTMxMTkwNDQ4OA==","XMTMxNDE5MzkzMg==","XMTMxNDc0NDUzMg=="]} );
+			words.push( {word:'生存', videos:["XMTMxMTE3MzQ1Mg==","XMTMxMTg3MjYyNA==","XMTMxMjgwNDQ5Ng==","XMTMxMzMyMDY1Ng=="]} );
+			words.push( {word:'渔民', videos:["XMTMxMzI5MzY2NA==","XMTMxMzMxMjU2OA==","XMTMxMzMxODUyMA==","XMTMxMzgxODYyNA=="]} );
+			words.push( {word:'漫长', videos:["XMTMxMTE2OTg0NA==","XMTMxMTk1OTM1Ng==","XMTMxMjA3MTg4MA=="]} );
+			words.push( {word:'陡峭', videos:["XMTMxMTc3MTA1Mg==","XMTMxMjA2NzM3Ng==","XMTMxMjc1MDMyOA=="]} );
+			words.push( {word:'巢穴', videos:["XMTMxMTgwMTM0MA==","XMTMxMTgyNDk2OA==","XMTMxMTg1Nzc4MA=="]} );
+			words.push( {word:'意味着', videos:["XMTMxMTg0NDIyMA==","XMTMxMjAwODY1Mg==","XMTMxMjE1ODIxMg=="]} );
+			words.push( {word:'覆盖', videos:["XMTMxMjcwNjYwOA==","XMTMxMjY3MTExMg==","XMTMxNDE0ODUwNA=="]} );
+			words.push( {word:'海拔', videos:["XMTMxMDY2NjM0MA==","XMTMxNDA1ODU2NA=="]} );
+			words.push( {word:'延伸', videos:["XMTMxMDU5MjY2MA==","XMTMxMTA0OTM4OA=="]} );
+			words.push( {word:'穿越', videos:["XMTMxMDYwMDUxMg==","XMTMxMjAxMTkyMA=="]} );
+			words.push( {word:'平原', videos:["XMTMxMTAzMzM5Mg==","XMTMxMzk1Mzc1Ng=="]} );
+			words.push( {word:'忙碌', videos:["XMTMxMTA2NzE4OA==","XMTMxMTgyNzgyNA=="]} );
+			words.push( {word:'坡', videos:["XMTMxMTE0ODA2OA==","XMTMxMTc4MjkxNg=="]} );
+			words.push( {word:'降临', videos:["XMTMxMTM5MzQxMg==","XMTMxMTgzNzA3Ng=="]} );
+			words.push( {word:'播种', videos:["XMTMxMTc5MDIwMA==","XMTMxMTgxODc0OA=="]} );
+			words.push( {word:'坚硬', videos:["XMTMxMTk4MzIyMA==","XMTMxNDAwNDA5Mg=="]} );
+			words.push( {word:'形态', videos:["XMTMxMTk3OTAyNA==","XMTMxMjQxMDAyOA=="]} );
+			words.push( {word:'岩石', videos:["XMTMxMTk2NTcyMA==","XMTMxMjA3NjM4OA=="]} );
+			words.push( {word:'溶解', videos:["XMTMxMjA0MTc2OA==","XMTMxMjEyODYwNA=="]} );
+			words.push( {word:'时光', videos:["XMTMxMjAyNzg0NA==","XMTMxMjEzODY0MA=="]} );
+			words.push( {word:'居住', videos:["XMTMxMjI5MjY5Ng==","XMTMxMjMyNTMwMA=="]} );
+			words.push( {word:'饲养', videos:["XMTMxMjMwMDc4OA==","XMTMxNDEzMDc0NA=="]} );
+			words.push( {word:'来源', videos:["XMTMxMjcyMDc1Ng==","XMTMxNDcwMzE0NA=="]} );
+			words.push( {word:'踪迹', videos:["XMTMxMjM0NzQxNg==","XMTMxMzMwNTE0NA=="]} );
+			words.push( {word:'耸', videos:["XMTMxMjY4MDc2OA==","XMTMxMzg0MjAzNg=="]} );
+			words.push( {word:'神奇', videos:["XMTMxMzI5MjI4MA==","XMTMxNDE3MzAzMg=="]} );
+			words.push( {word:'炎热', videos:["XMTMxMzYzNDM1Ng==","XMTMxNDE1NzE0MA=="]} );
+			words.push( {word:'娃娃', videos:["XMTMxMzg3ODU2MA==","XMTMxNDIxMTE4OA=="]} );
+			words.push( {word:'珍稀', videos:["XMTMxMzg4NzAyOA==","XMTMxMzk1ODQ1Ng=="]} );
+			words.push( {word:'溪', videos:["XMTMxMzkwMzcwMA==","XMTMxNDE2MDkxMg=="]} );
+			words.push( {word:'家伙', videos:["XMTMxNDAyMTcxNg==","XMTMxNDE4MDA5Ng=="]} );
+			words.push( {word:'和谐', videos:["XMTMxNDcyMTUwOA==","XMTMxNDc4NDIzNg=="]} );
+			words.push( {word:'生机', videos:["XMTMxMjgzMTE3Ng=="]} );
+			words.push( {word:'辽阔', videos:["XMTMxMDI5MzQ0MA=="]} );
+			words.push( {word:'守护', videos:["XMTMxMDM3Mjk4OA=="]} );
+			words.push( {word:'炫耀', videos:["XMTMxMDU4NDQwNA=="]} );
+			words.push( {word:'震撼', videos:["XMTMxMDYxMDU4NA=="]} );
+			words.push( {word:'庞大', videos:["XMTMxMDY3Mjc3Ng=="]} );
+			words.push( {word:'山脉', videos:["XMTMxMjgyNDI3Mg=="]} );
+			words.push( {word:'居民', videos:["XMTMxMTA2MjY4OA=="]} );
+			words.push( {word:'孕育', videos:["XMTMxMTA3Mjk4OA=="]} );
+			words.push( {word:'祖先', videos:["XMTMxMTEzMzg2NA=="]} );
+			words.push( {word:'原始', videos:["XMTMxMTE0MjE0OA=="]} );
+			words.push( {word:'玉', videos:["XMTMxMTE2MDM2OA=="]} );
+			words.push( {word:'壮丽', videos:["XMTMxMTE2NDc0OA=="]} );
+			words.push( {word:'举动', videos:["XMTMxMTQxMDAxNg=="]} );
+			words.push( {word:'仪式', videos:["XMTMxMTQxMzUwNA=="]} );
+			words.push( {word:'场面', videos:["XMTMxMTQxODY4OA=="]} );
+			words.push( {word:'即便', videos:["XMTMxMTQyMzMxNg=="]} );
+			words.push( {word:'依旧', videos:["XMTMxMTQyNjY2MA=="]} );
+			words.push( {word:'中央', videos:["XMTMxMTQzMDk2MA=="]} );
+			words.push( {word:'肥沃', videos:["XMTMxMTc3NDg2OA=="]} );
+			words.push( {word:'赋予', videos:["XMTMxMTgwNDQwMA=="]} );
+			words.push( {word:'敞开', videos:["XMTMxMTgyMTA4MA=="]} );
+			words.push( {word:'勤劳', videos:["XMTMxMTgzMDMxNg=="]} );
+			words.push( {word:'人为', videos:["XMTMxMTg0NzkwNA=="]} );
+			words.push( {word:'无忧无虑', videos:["XMTMxMTg2NjU5Ng=="]} );
+			words.push( {word:'依赖', videos:["XMTMxMTg3NjQwNA=="]} );
+			words.push( {word:'区域', videos:["XMTMxMTkwMTU5Ng=="]} );
+			words.push( {word:'地质', videos:["XMTMxMTk4ODc4NA=="]} );
+			words.push( {word:'典型', videos:["XMTMxMTk4NjIxNg=="]} );
+			words.push( {word:'极限', videos:["XMTMxMjA0ODY4OA=="]} );
+			words.push( {word:'凝固', videos:["XMTMxMjA1MjEzNg=="]} );
+			words.push( {word:'探索', videos:["XMTMxMjA1NjQ1Mg=="]} );
+			words.push( {word:'永恒', videos:["XMTMxMjA2MTgwMA=="]} );
+			words.push( {word:'生物', videos:["XMTMxMjExOTYzMg=="]} );
+			words.push( {word:'隧道', videos:["XMTMxMjgwNzkyNA=="]} );
+			words.push( {word:'观光', videos:["XMTMxMjEzNjMzMg=="]} );
+			words.push( {word:'标记', videos:["XMTMxMjE2MTk5Ng=="]} );
+			words.push( {word:'保障', videos:["XMTMxMjE2NTI4NA=="]} );
+			words.push( {word:'尝试', videos:["XMTMxMjc5OTc1Mg=="]} );
+			words.push( {word:'迁徙', videos:["XMTMxMjg0MTU2MA=="]} );
+			words.push( {word:'技巧', videos:["XMTMxMjc0NDA0NA=="]} );
+			words.push( {word:'领袖', videos:["XMTMxMjY1MDAzNg=="]} );
+			words.push( {word:'危机', videos:["XMTMxMjI0ODg1Ng=="]} );
+			words.push( {word:'诱惑', videos:["XMTMxMjI1MjMzNg=="]} );
+			words.push( {word:'人家', videos:["XMTMxMjI5NTcyMA=="]} );
+			words.push( {word:'牲畜', videos:["XMTMxMjI5ODM2OA=="]} );
+			words.push( {word:'筐', videos:["XMTMxMjcwMjk0NA=="]} );
+			words.push( {word:'笼罩', videos:["XMTMxMjMyOTAyMA=="]} );
+			words.push( {word:'苏醒', videos:["XMTMxMjMzMzQ4MA=="]} );
+			words.push( {word:'反射', videos:["XMTMxMjM0MzY4OA=="]} );
+			words.push( {word:'捕捉', videos:["XMTMxMjY5ODAwNA=="]} );
+			words.push( {word:'惊奇', videos:["XMTMxMjQwMjY0OA=="]} );
+			words.push( {word:'清澈', videos:["XMTMxMjY2NDM4MA=="]} );
+			words.push( {word:'曲折', videos:["XMTMxMjQwODEyOA=="]} );
+			words.push( {word:'防止', videos:["XMTMxMzMyMjA4MA=="]} );
+			words.push( {word:'激励', videos:["XMTMxMzI5MDc1Ng=="]} );
+			words.push( {word:'迈', videos:["XMTMxMzYyOTM0NA=="]} );
+			words.push( {word:'复活', videos:["XMTMxMzMwMzYyOA=="]} );
+			words.push( {word:'奖励', videos:["XMTMxMzMwOTc4NA=="]} );
+			words.push( {word:'喂', videos:["XMTMxMzMxNDI1Mg=="]} );
+			words.push( {word:'封闭', videos:["XMTMxMzMxNzQwOA=="]} );
+			words.push( {word:'铺', videos:["XMTMxMzMxOTU0NA=="]} );
+			words.push( {word:'捞', videos:["XMTMxMzYzNzg2OA=="]} );
+			words.push( {word:'打包', videos:["XMTMxMzY2MjUxMg=="]} );
+			words.push( {word:'繁殖', videos:["XMTMxMzgxMjM0NA=="]} );
+			words.push( {word:'晾', videos:["XMTMxMzgyNTA5Mg=="]} );
+			words.push( {word:'婴儿', videos:["XMTMxMzg4MjUwOA=="]} );
+			words.push( {word:'公认', videos:["XMTMxMzk4MDU4OA=="]} );
+			words.push( {word:'攻克', videos:["XMTMxMzk4MzUwOA=="]} );
+			words.push( {word:'人工', videos:["XMTMxNDAwMDcyOA=="]} );
+			words.push( {word:'依靠', videos:["XMTMxNDAwNzQ2MA=="]} );
+			words.push( {word:'迫不及待', videos:["XMTMxNDAxNzU1Ng=="]} );
+			words.push( {word:'边缘', videos:["XMTMxNDA0MTYwMA=="]} );
+			words.push( {word:'耗费', videos:["XMTMxNDA0NDg4MA=="]} );
+			words.push( {word:'持久', videos:["XMTMxNDA1NDk2OA=="]} );
+			words.push( {word:'坚韧', videos:["XMTMxNDEzMzAwOA=="]} );
+			words.push( {word:'后代', videos:["XMTMxNDE1MTIxMg=="]} );
+			words.push( {word:'起初', videos:["XMTMxNDE3NTIwOA=="]} );
+			words.push( {word:'动手', videos:["XMTMxNDE3Njk4NA=="]} );
+			words.push( {word:'见多识广', videos:["XMTMxNDE4MjYxNg=="]} );
+			words.push( {word:'在意', videos:["XMTMxNDE4MTQ0OA=="]} );
+			words.push( {word:'解除', videos:["XMTMxNDE4MzcwMA=="]} );
+			words.push( {word:'杂交', videos:["XMTMxNDE5MTQ5Mg=="]} );
+			words.push( {word:'扑', videos:["XMTMxNDIwMTMwMA=="]} );
+			words.push( {word:'翼', videos:["XMTMxNDIwMjI3Ng=="]} );
+			words.push( {word:'惦记', videos:["XMTMxNDY5ODQ2NA=="]} );
+			words.push( {word:'罕见', videos:["XMTMxNDcxNTA4NA=="]} );
+			words.push( {word:'生态', videos:["XMTMxNDcyNjk2MA=="]} );
+			words.push( {word:'即将', videos:["XMTMxNDczNDUyMA=="]} );
+			words.push( {word:'遥远', videos:["XMTMxNDc1MDg5Ng=="]} );
+			words.push( {word:'北极', videos:["XMTMxNDc2MTM0NA=="]} );
+			words.push( {word:'濒临', videos:["XMTMxNDc2NjA1Mg=="]} );
+			words.push( {word:'出路', videos:["XMTMxNDc4MTIyOA=="]} );
+        </script>
+
+        <!-- Touch scrolling -->
+        <!--[if !IE]><!-->
+        <script src="http://localhost/~Apple/vv/iscroll.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            if (typeof document.body.style.webkitOverflowScrolling === "undefined") {
+                var xScrollers = document.getElementsByClassName("scroll-x");
+                for (var i = 0; i < xScrollers.length; i++)
+                    new iScroll(xScrollers[i], { vScroll: false });
+
+                var yScrollers = document.getElementsByClassName("scroll-y");
+                for (var i = 0; i < yScrollers.length; i++)
+                    new iScroll(yScrollers[i], { hScroll: false });
+            }
+        </script>
+        <!--<![endif]-->
+    </body>
+</html>
