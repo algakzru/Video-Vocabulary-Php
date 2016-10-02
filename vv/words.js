@@ -137,4 +137,4 @@ words.push( {word:'在意', pinyin:'zàiyì', id:1902, videos:["XMTMxNDE4MTQ0OA=
 words.push( {word:'杂交', pinyin:'zájiāo', id:1904, videos:["XMTMxNDE5MTQ5Mg=="], times:["004806130_004837810"]} );
 words.push( {word:'踪迹', pinyin:'zōngjì', id:1863, videos:["XMTMxMjM0NzQxNg==","XMTMxMzMwNTE0NA=="], times:["002947520_003027840","003212370_003256050"]} );
 words.push( {word:'祖先', pinyin:'zǔxiān', id:1804, videos:["XMTMxMTEzMzg2NA=="], times:["000449327_000526000"]} );
-document.getElementById('divWordlist').innerHTML = '<select><option></option><option></option><option></option></select>';
+document.getElementById('divWordlist').innerHTML = '<select><option>锦绣华南（HSK6）</option><option>锦绣华南（HSK5）</option><option>锦绣华南（熟语）</option></select>';
