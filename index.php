@@ -28,16 +28,20 @@
     $results = $db->query('SELECT id, word, pronunciation FROM word WHERE ' . $selected_categories . ' ORDER BY pronunciation');
     while ($row = $results->fetchArray()) {
 		$results2 = $db->query('SELECT * FROM word_video INNER JOIN video ON word_video.video_id = video.video_id where word_video.word_id='. $row['id']);
-		$youtubeIds = ""; $time = ""; $sentence = "";
+		$youtubeIds = ""; $withoutSubs = ""; $sentence = "";
 		while ($row2 = $results2->fetchArray()) {
 			if ($youtubeIds != "") $youtubeIds .= ",";
-			if ($time != "") $time .= ",";
 			$youtubeIds .= "\"" . $row2['youku_id'] . "\"";
-			$time .= "\"" . explode("_", $row2['file_name'])[0] . "_" . explode("_", $row2['file_name'])[1] . "\"";
+			$time = explode("_", $row2['file_name'])[0] . "_" . explode("_", $row2['file_name'])[1];
+			$results3 = $db->query("SELECT * FROM video where movie_name='". $row2['movie_name'] . "' and file_name='". $time. ".mp4'");
+			while ($row3 = $results3->fetchArray()) {
+				if ($withoutSubs != "") $withoutSubs .= ",";
+				$withoutSubs .= "\"" . $row3['youku_id'] . "\"";
+			}
 		}
-		fwrite($file_words, "words.push( {word:'" . $row['word'] . "', pinyin:'" . $row['pronunciation'] . "', id:" . $row['id'] . ", videos:[");
-		fwrite($file_words, $youtubeIds . "], times:[");
-		fwrite($file_words, $time . "]} );\n");
+		fwrite($file_words, "words.push( {word:'" . $row['word'] . "', pinyin:'" . $row['pronunciation'] . "', id:" . $row['id'] . ", withSubs:[");
+		fwrite($file_words, $youtubeIds . "], withoutSubs:[");
+		fwrite($file_words, $withoutSubs . "]} );\n");
     }
 	fwrite($file_words, "document.getElementById('divWordlist').innerHTML = '" . $wordlist_names ."';\n");
     fclose($file_words);

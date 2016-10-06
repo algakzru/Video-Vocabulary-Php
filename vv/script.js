@@ -27,13 +27,17 @@ ul.onclick = function(event) {
 function onClick(index, hanzi) {
 	document.getElementById('divTitle').innerHTML = words[index].word;
 	var text = "<select onchange='selectVideo(" + index + ", this.value)'>";
-	for (i=0; i<words[index].videos.length; i++) {
-		text += "<option value=" + i + " " + (i==0?"selected":"") + ">" +  words[index].videos[ i ] + "</option>";
+	for (i=0; i<words[index].withSubs.length; i++) {
+		text += "<option value=" + i + " " + (i==0?"selected":"") + ">" +  words[index].withSubs[ i ] + "</option>";
 	}
 	text += "</select>";
 	document.getElementById('selectVideos').innerHTML = text;
 	document.getElementById("videobox").style.display = "block";
-	document.getElementById("player").src = "http://player.youku.com/embed/" + words[index].videos[ 0 ];
+    if (document.getElementById('cbSubtitles').checked) {
+        document.getElementById("player").src = "http://player.youku.com/embed/" + words[index].withSubs[ 0 ];
+    } else {
+        document.getElementById("player").src = "http://player.youku.com/embed/" + words[index].withoutSubs[ 0 ];
+    }
 	document.getElementById("btnDelete").onclick = function() { deleteWordConfirmation( words[index].word, words[index].id ) } ;
 	document.getElementById("btnEdit").onclick = function() { location.href = "tempRefresh.php?word_id=" + words[index].id; } ;
 }
