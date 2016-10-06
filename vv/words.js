@@ -1,4 +1,9 @@
 var words = [];
+words.push( {word:'不得了', pinyin:'', id:1982, videos:["XMTY0MTMzOTMwNA=="], times:["0000000_000023480"]} );
+words.push( {word:'关键', pinyin:'', id:1983, videos:["XMTY0MjUzODcyOA=="], times:["000045400_000105660"]} );
+words.push( {word:'煎', pinyin:'', id:1984, videos:["XMTY0MjUzOTgzMg=="], times:["000150300_000210100"]} );
+words.push( {word:'地三鲜', pinyin:'', id:1985, videos:["XMTY1MjgwNzIwOA=="], times:["entire_地三鲜.mp4"]} );
+words.push( {word:'完整视频', pinyin:'', id:1989, videos:["XMTY5Njk2OTM2MA=="], times:["完整视频_完整视频.mp4"]} );
 words.push( {word:'边缘', pinyin:'biānyuán', id:1894, videos:["XMTMxNDA0MTYwMA=="], times:["004308530_004334930"]} );
 words.push( {word:'标记', pinyin:'biāojì', id:1845, videos:["XMTMxMjE2MTk5Ng=="], times:["002108640_002148960"]} );
 words.push( {word:'北极', pinyin:'běijí', id:1914, videos:["XMTMxNDc2MTM0NA=="], times:["005347410_005446450"]} );
@@ -137,4 +142,4 @@ words.push( {word:'在意', pinyin:'zàiyì', id:1902, videos:["XMTMxNDE4MTQ0OA=
 words.push( {word:'杂交', pinyin:'zájiāo', id:1904, videos:["XMTMxNDE5MTQ5Mg=="], times:["004806130_004837810"]} );
 words.push( {word:'踪迹', pinyin:'zōngjì', id:1863, videos:["XMTMxMjM0NzQxNg==","XMTMxMzMwNTE0NA=="], times:["002947520_003027840","003212370_003256050"]} );
 words.push( {word:'祖先', pinyin:'zǔxiān', id:1804, videos:["XMTMxMTEzMzg2NA=="], times:["000449327_000526000"]} );
-document.getElementById('divWordlist').innerHTML = '<select><option>锦绣华南（HSK6）</option><option>锦绣华南（HSK5）</option><option>锦绣华南（熟语）</option></select>';
+document.getElementById('divWordlist').innerHTML = '<select><option>锦绣华南（HSK6）</option><option>锦绣华南（HSK5）</option><option>锦绣华南（熟语）</option><option>地三鲜</option></select>';

@@ -27,7 +27,7 @@
 	//$results = $db->query('SELECT id, word, sentence FROM word INNER JOIN word_video ON word_video.word_id = word.id  WHERE ' . $selected_categories . ' GROUP BY word_video.word_id ORDER BY COUNT(word_video.video_id) DESC');
     $results = $db->query('SELECT id, word, pronunciation FROM word WHERE ' . $selected_categories . ' ORDER BY pronunciation');
     while ($row = $results->fetchArray()) {
-		$results2 = $db->query('SELECT * FROM word_video INNER JOIN video ON word_video.video_id = video.video_id where video.movie_name="锦绣华南" and word_video.word_id='. $row['id']);
+		$results2 = $db->query('SELECT * FROM word_video INNER JOIN video ON word_video.video_id = video.video_id where word_video.word_id='. $row['id']);
 		$youtubeIds = ""; $time = ""; $sentence = "";
 		while ($row2 = $results2->fetchArray()) {
 			if ($youtubeIds != "") $youtubeIds .= ",";
