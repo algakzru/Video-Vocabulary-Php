@@ -12,7 +12,7 @@
 	$wordlist_names .= "<option value='ALL'>ALL</option>";
     while ($row = $results->fetchArray()) {
         if ($selected_categories == "") {
-        	$selected_categories .= "category_id in (";
+        	$selected_categories .= "wordlist_id in (";
         } else {
         	$selected_categories .= ", ";
         }
@@ -26,7 +26,7 @@
     fwrite($file_words, "var words = [];\n");
 	$sum=0;
 	//$results = $db->query('SELECT id, word, sentence FROM word INNER JOIN word_video ON word_video.word_id = word.id  WHERE ' . $selected_categories . ' GROUP BY word_video.word_id ORDER BY COUNT(word_video.video_id) DESC');
-    $results = $db->query('SELECT id, word, pronunciation, category_id FROM word WHERE ' . $selected_categories . ' ORDER BY pronunciation');
+    $results = $db->query('SELECT id, word, pronunciation, wordlist_id FROM word WHERE ' . $selected_categories . ' ORDER BY pronunciation');
     while ($row = $results->fetchArray()) {
 		$results2 = $db->query('SELECT * FROM word_video INNER JOIN video ON word_video.video_id = video.video_id where word_video.word_id='. $row['id']);
 		$youtubeIds = ""; $withoutSubs = ""; $sentence = "";
@@ -40,7 +40,7 @@
 				$withoutSubs .= "\"" . $row3['youku_id'] . "\"";
 			}
 		}
-		fwrite($file_words, "words.push( {word:'" . $row['word'] . "', pinyin:'" . $row['pronunciation'] . "', id:" . $row['id'] . ", wordlist_id:'" . $row['category_id'] . "', withSubs:[");
+		fwrite($file_words, "words.push( {word:'" . $row['word'] . "', pinyin:'" . $row['pronunciation'] . "', id:" . $row['id'] . ", wordlist_id:'" . $row['wordlist_id'] . "', withSubs:[");
 		fwrite($file_words, $youtubeIds . "], withoutSubs:[");
 		fwrite($file_words, $withoutSubs . "]} );\n");
     }
