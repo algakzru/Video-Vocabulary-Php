@@ -39,7 +39,9 @@ function onClick(index, hanzi) {
         document.getElementById("player").src = "http://player.youku.com/embed/" + words[index].withoutSubs[ 0 ];
     }
 	document.getElementById("btnDelete").onclick = function() { deleteWordConfirmation( words[index].word, words[index].id ) } ;
-	document.getElementById("btnEdit").onclick = function() { location.href = "tempRefresh.php?word_id=" + words[index].id; } ;
+	document.getElementById("btnEdit").onclick = function() { 
+		window.open("tempRefresh.php?word_id=" + words[index].id, "_blank");
+	}
 }
 
 function wordListOnChange(value) {
