@@ -42,6 +42,10 @@ function onClick(index, hanzi) {
 	document.getElementById("btnEdit").onclick = function() { location.href = "tempRefresh.php?word_id=" + words[index].id; } ;
 }
 
+function wordListOnChange(value) {
+	setList(value);
+}
+
 function selectVideo(index, videoPosition) {
 	document.getElementById("player").src = "http://player.youku.com/embed/" + words[index].videos[ videoPosition ];
 }
@@ -55,13 +59,18 @@ function deleteWordConfirmation(word, word_id) {
 
 var selected_li = null;
 
-function seList() {
+function setList(wordlistId) {
+	while (ul.firstChild) {
+		ul.removeChild(ul.firstChild);
+	}
 	for (i = 0; i < words.length; i++) {
-		var li = document.createElement("LI");
-		li.id = "itm" + i;
-		var textnode = document.createTextNode(words[i].word);
-		li.appendChild(textnode);
-		ul.appendChild(li);
+		if (wordlistId == "ALL" || words[i].wordlist_id == wordlistId) {
+			var li = document.createElement("LI");
+			li.id = "itm" + i;
+			var textnode = document.createTextNode(words[i].word);
+			li.appendChild(textnode);
+			ul.appendChild(li);
+		}
 	}
 }
-seList();
+setList("ALL");
