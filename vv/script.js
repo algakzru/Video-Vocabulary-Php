@@ -25,7 +25,7 @@ ul.onclick = function(event) {
 };
 
 function onClick(index, hanzi) {
-	document.getElementById('divTitle').innerHTML = words[index].word;
+	//document.getElementById('divTitle').innerHTML = words[index].word;
 	var text = "<select onchange='selectVideo(" + index + ", this.value)'>";
 	for (i=0; i<words[index].withSubs.length; i++) {
 		text += "<option value=" + i + " " + (i==0?"selected":"") + ">" +  words[index].withSubs[ i ] + "</option>";
