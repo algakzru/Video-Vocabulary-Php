@@ -32,6 +32,7 @@ function onClick(index, hanzi) {
 	}
 	text += "</select>";
 	document.getElementById('selectVideos').innerHTML = text;
+    document.getElementById("editbox").style.display = "none";
 	document.getElementById("videobox").style.display = "block";
     if (document.getElementById('cbSubtitles').checked) {
         document.getElementById("player").src = "http://player.youku.com/embed/" + words[index].withSubs[ 0 ];
@@ -39,9 +40,51 @@ function onClick(index, hanzi) {
         document.getElementById("player").src = "http://player.youku.com/embed/" + words[index].withoutSubs[ 0 ];
     }
 	document.getElementById("btnDelete").onclick = function() { deleteWordConfirmation( words[index].word, words[index].id ) } ;
-	document.getElementById("btnEdit").onclick = function() { 
-		window.open("tempRefresh.php?word_id=" + words[index].id, "_blank");
-	}
+	document.getElementById("btnEdit").onclick = function() { requestTempRefresh(words[index].id); }
+}
+
+function requestTempRefresh(wordId) {
+	var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            //alert(this.responseText);
+            returnObj = JSON.parse(this.responseText);
+            //alert(returnObj.location);
+            
+            document.getElementById("videobox").style.display = "none";
+            document.getElementById("editbox").style.display = "block";
+            document.getElementById("btnCancel").onclick = function() { document.getElementById("editbox").style.display = "none"; }
+            document.getElementById("btnSave").onclick = function() {
+                saveWord(wordId, document.getElementById("inputWord").value, document.getElementById("selectWordlist").value); }
+        }
+    };
+    xmlhttp.open("GET", "tempRefresh.php?wordId=" + wordId, true);
+    xmlhttp.send();
+}
+
+function checkYouku() {
+    location.href = "https://openapi.youku.com/v2/oauth2/authorize?client_id=f9e962f0927cea7d&response_type=code&state=xyz&redirect_uri=http://localhost/~Apple/checkYouku.php";
+}
+
+function saveWord(wordId, word, wordlistId) {
+    if (wordlistId == "") {
+        alert('Select Wordlist');
+        return;
+    }
+    if (word == "") {
+        alert('Input Word');
+        return;
+    }
+	var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            alert(this.responseText);
+            returnObj = JSON.parse(this.responseText);
+            //alert(returnObj.location);
+        }
+    };
+    xmlhttp.open("GET", "tempSaveWord.php?wordId=" + wordId + "&word=" + word + "&wordlistId=" + wordlistId, true);
+    xmlhttp.send();
 }
 
 function wordListOnChange(value) {

@@ -26,7 +26,8 @@
         </div>
         <div class="right col">
             <div class="header row" id="divTitle">
-				<button type='button' onClick='window.open("tempRefresh.php", "_blank")'>Add word</button>
+				<button type='button' onClick='checkYouku()'>Youku Upload</button>
+				<button type='button' onClick='requestTempRefresh(0)'>Add word</button>
 			</div>
             <div class="body row" style="padding: 0; margin: 0">
                 <div id="videobox" class="outer" style="height:100%; width: 100%; display: none;">
@@ -43,6 +44,33 @@
 						</li>
 						<li><iframe id="player" width="560" height="315" src="http://player.youku.com/embed/XMTMxNDc4NDIzNg==" frameborder=0 allowfullscreen></iframe></li>
 						<li><input type="checkbox" id="cbSubtitles" checked> Subtitles</li>
+					</ul>
+					</span>
+                </div>
+                <div id="editbox" class="outer" style="height:100%; width: 100%; display: none;">
+					<span class="inner">
+					<ul class='listview inset'>
+						<li>
+							<table width=100%>
+								<tr>
+									<td><button type='button' id="btnCancel">Cancel</button></td>
+									<td><span id="spanWordlist" style='text-align: center'></span></td>
+									<td><input type='text' id='inputWord' placeholder="Input Word"></td>
+									<td><button type='button' id="btnSave">Save</button></td>
+								</tr>
+							</table>
+						</li>
+						<li><iframe id="player" width="560" height="315" src="http://player.youku.com/embed/XMTMxNDc4NDIzNg==" frameborder=0 allowfullscreen></iframe></li>
+						<li>
+							<table width=100%>
+								<tr>
+									<td><button type='button' id="btnVideoDelete">Delete Video</button></td>
+									<td><span id="selectVideo" style='text-align: center'></span></td>
+									<td><input type="checkbox" id="cbWithSubs" checked> Subtitles</td>
+									<td><button type='button' id="btnVideoAdd">Add Video</button></td>
+								</tr>
+							</table>
+						</li>
 					</ul>
 					</span>
                 </div>

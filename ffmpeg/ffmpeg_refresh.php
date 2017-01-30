@@ -1,0 +1,1 @@
+<?php    $videos = array();  	$myfile = fopen(htmlspecialchars($_GET["path"]), "r") or die("Unable to open file!");		$returnArray = array();	// Output one line until end-of-file	while(!feof($myfile)) {		$time = trim(fgets($myfile));		array_push($returnArray, $time);	}	fclose($myfile);    	$returnJSON = json_encode($returnArray);	echo $returnJSON;?>

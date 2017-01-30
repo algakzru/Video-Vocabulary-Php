@@ -2,6 +2,10 @@ var words = [];
 words.push( {word:'不得了', pinyin:'', id:1982, wordlist_id:'55', withSubs:["XMTY0MTMzOTMwNA=="], withoutSubs:["XMTY0MTU5Nzg5Ng=="]} );
 words.push( {word:'关键', pinyin:'', id:1983, wordlist_id:'55', withSubs:["XMTY0MjUzODcyOA=="], withoutSubs:[]} );
 words.push( {word:'煎', pinyin:'', id:1984, wordlist_id:'55', withSubs:["XMTY0MjUzOTgzMg=="], withoutSubs:[]} );
+words.push( {word:'正宗', pinyin:'', id:1993, wordlist_id:'56', withSubs:["XMjQ4OTE0MTY0MA=="], withoutSubs:["XMjQ4OTE0OTk3Mg=="]} );
+words.push( {word:'ignorant', pinyin:'', id:1994, wordlist_id:'57', withSubs:["XMjQ5MDEwMDA0OA=="], withoutSubs:["XMjQ4OTkyNTg0OA=="]} );
+words.push( {word:'point out', pinyin:'', id:1995, wordlist_id:'57', withSubs:["XMjQ4OTkyODYwNA=="], withoutSubs:["XMjQ4OTkyNTg0OA=="]} );
+words.push( {word:'from the word go', pinyin:'', id:1996, wordlist_id:'57', withSubs:["XMjQ4OTkyNDU1Mg=="], withoutSubs:["XMjQ4OTkxNzIzNg=="]} );
 words.push( {word:'边缘', pinyin:'biānyuán', id:1894, wordlist_id:'50', withSubs:["XMTMxNDA0MTYwMA=="], withoutSubs:["XMTMzNTU0Nzc5Ng=="]} );
 words.push( {word:'标记', pinyin:'biāojì', id:1845, wordlist_id:'50', withSubs:["XMTMxMjE2MTk5Ng=="], withoutSubs:["XMTMzNTg1ODY2OA=="]} );
 words.push( {word:'北极', pinyin:'běijí', id:1914, wordlist_id:'50', withSubs:["XMTMxNDc2MTM0NA=="], withoutSubs:["XMTMzNDgwNTI4MA=="]} );
@@ -140,4 +144,5 @@ words.push( {word:'在意', pinyin:'zàiyì', id:1902, wordlist_id:'50', withSub
 words.push( {word:'杂交', pinyin:'zájiāo', id:1904, wordlist_id:'50', withSubs:["XMTMxNDE5MTQ5Mg=="], withoutSubs:["XMTMzNTAxODYwNA=="]} );
 words.push( {word:'踪迹', pinyin:'zōngjì', id:1863, wordlist_id:'50', withSubs:["XMTMxMjM0NzQxNg==","XMTMxMzMwNTE0NA=="], withoutSubs:["XMTMzNTgxODEwMA==","XMTMzNTczNTkxMg=="]} );
 words.push( {word:'祖先', pinyin:'zǔxiān', id:1804, wordlist_id:'50', withSubs:["XMTMxMTEzMzg2NA=="], withoutSubs:["XMTMzNTk0MDcxNg=="]} );
-document.getElementById('divWordlist').innerHTML = "<select onchange='wordListOnChange(this.value)'><option value='ALL'>ALL</option><option value='50'>锦绣华南（HSK6）</option><option value='51'>锦绣华南（HSK5）</option><option value='52'>锦绣华南（熟语）</option><option value='55'>地三鲜</option><option value='56'>宫保鸡丁</option></select>";
+document.getElementById('divWordlist').innerHTML = "<select onchange='wordListOnChange(this.value)'><option value='ALL'>ALL</option><option value='50'>锦绣华南（HSK6）</option><option value='51'>锦绣华南（HSK5）</option><option value='52'>锦绣华南（熟语）</option><option value='55'>地三鲜</option><option value='56'>宫保鸡丁</option><option value='57'>12 angry men</option></select>";
+document.getElementById('spanWordlist').innerHTML = "<select id='selectWordlist'><option value='' selected disabled>Select Wordlist</option><option value='50'>锦绣华南（HSK6）</option><option value='51'>锦绣华南（HSK5）</option><option value='52'>锦绣华南（熟语）</option><option value='55'>地三鲜</option><option value='56'>宫保鸡丁</option><option value='57'>12 angry men</option></select>";

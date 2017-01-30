@@ -9,7 +9,9 @@
 	$results = $db->query('SELECT * FROM wordlist WHERE is_skip = 0');
     $selected_categories = "";
 	$wordlist_names = "<select onchange='wordListOnChange(this.value)'>";
+	$wordlist_names2 = "<select id='selectWordlist'>";
 	$wordlist_names .= "<option value='ALL'>ALL</option>";
+	$wordlist_names2 .= "<option value='' selected disabled>Select Wordlist</option>";
     while ($row = $results->fetchArray()) {
         if ($selected_categories == "") {
         	$selected_categories .= "wordlist_id in (";
@@ -18,9 +20,11 @@
         }
         $selected_categories .= $row['id'];
 		$wordlist_names .= "<option value='" . $row['id'] . "'>" . $row['wordlist'] . "</option>";
+		$wordlist_names2 .= "<option value='" . $row['id'] . "'>" . $row['wordlist'] . "</option>";
     }
     $selected_categories .= ($selected_categories == "" ? "" : ")");
 	$wordlist_names .= "</select>";
+	$wordlist_names2 .= "</select>";
     
 	$file_words = fopen("vv/words.js", "w") or die("Unable to open file!");
     fwrite($file_words, "var words = [];\n");
@@ -44,6 +48,7 @@
 		fwrite($file_words, $withoutSubs . "]} );\n");
     }
 	fwrite($file_words, "document.getElementById('divWordlist').innerHTML = \"" . $wordlist_names ."\";\n");
+	fwrite($file_words, "document.getElementById('spanWordlist').innerHTML = \"" . $wordlist_names2 ."\";\n");
     fclose($file_words);
 	
 	echo "<script src='vv/words.js' type='text/javascript'></script>\n";
