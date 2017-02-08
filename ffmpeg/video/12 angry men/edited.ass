@@ -293,9 +293,9 @@ Dialogue: 0,0:15:46.32,0:15:47.77,English,,0,0,0,,No, no, no. That's a good one.
 Dialogue: 0,0:15:47.86,0:15:50.94,English,,0,0,0,,Uh, suppose we go\Nonce around the table.
 Dialogue: 0,0:15:51.03,0:15:53.91,English,,0,0,0,,- I guess you're first.\N- Oh.
 Dialogue: 0,0:15:53.99,0:15:55.32,English,,0,0,0,,Well, uh...
-Dialogue: 0,0:15:56.87,0:15:59.29,English,,0,0,0,,Well, it-it's hard to put into words.
+Dialogue: 0,0:15:56.87,0:15:59.29,English,,0,0,0,,Well, it-it's hard to {\c&H00FFFF&}put into words{\c&HFFFFFF&}.
 Dialogue: 0,0:16:00.33,0:16:02.33,English,,0,0,0,,I just think he's guilty.
-Dialogue: 0,0:16:02.42,0:16:04.92,English,,0,0,0,,I thought it was obvious\N{\c&H00FFFF&}from the word go{\c&HFFFFFF&}.
+Dialogue: 0,0:16:02.42,0:16:04.92,English,,0,0,0,,I thought it was obvious\Nfrom the word go.
 Dialogue: 0,0:16:05.00,0:16:06.50,English,,0,0,0,,I mean, nobody proved otherwise.
 Dialogue: 0,0:16:06.59,0:16:08.13,English,,0,0,0,,Nobody has to prove otherwise.
 Dialogue: 0,0:16:08.21,0:16:10.46,English,,0,0,0,,The burden of proof's on the prosecution.

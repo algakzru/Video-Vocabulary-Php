@@ -2,18 +2,18 @@
     header('Content-type: text/html; charset=utf-8');
     echo "<center>\n";
 	
-	echo "<button type='button' onclick='location.href = \"ffmpeg_set.php?word=" . htmlspecialchars($_GET["word"]) . "&time=" . htmlspecialchars($_GET["time"]) . "\";'>Back</button>\n";
+	echo "<button type='button' onclick='location.href = \"ffmpeg_set.php?word=" . urldecode($_GET["word"]) . "&time=" . htmlspecialchars($_GET["time"]) . "\";'>Back</button>\n";
 	echo "<hr width=300>\n";
 
 	$ffmpeg = getcwd() . "/ffmpeg";
 	$ffprobe = getcwd() . "/ffprobe";
-	$input = getcwd() . "/video/" . htmlspecialchars($_GET["movie"]) . "/original.mp4";
-	$subtitleFile = getcwd() . "/video/" . htmlspecialchars($_GET["movie"]) . "/edited.ass";
+	$input = getcwd() . "/video/" . urldecode($_GET["movie"]) . "/original.mp4";
+	$subtitleFile = getcwd() . "/video/" . urldecode($_GET["movie"]) . "/edited.ass";
 	$output_end = ($_GET["isSubs"] != "" ? "_" . urldecode($_GET["word"]) : "");
-	$output = getcwd() . "/video/" . htmlspecialchars($_GET["movie"]) . "/" . htmlspecialchars($_GET["time"]) . $output_end . ".mp4";
-	$fileBlack = getcwd() . "/video/" . htmlspecialchars($_GET["movie"]) . "/black.mp4";
-	$fileEdited = getcwd() . "/video/" . htmlspecialchars($_GET["movie"]) . "/edited.mp4";
-	$fileConcat = getcwd() . "/video/" . htmlspecialchars($_GET["movie"]) . "/concat.txt";
+	$output = getcwd() . "/video/" . urldecode($_GET["movie"]) . "/" . urldecode($_GET["time"]) . $output_end . ".mp4";
+	$fileBlack = getcwd() . "/video/" . urldecode($_GET["movie"]) . "/black.mp4";
+	$fileEdited = getcwd() . "/video/" . urldecode($_GET["movie"]) . "/edited.mp4";
+	$fileConcat = getcwd() . "/video/" . urldecode($_GET["movie"]) . "/concat.txt";
 		
 	putenv("FC_CONFIG_DIR=".getcwd());
 	putenv("FONTCONFIG_PATH=".getcwd());
@@ -58,11 +58,11 @@
 		$filterComplex .= "-filter_complex \"$filterComplexContent\"";
 	}
 	
-	$cmdBlack = "$ffmpeg -y -f lavfi -i color=color=black:s=480x270:d=2 $fileBlack 2>&1";
-	echo $cmdEdited = "$ffmpeg -y -i \"$input\" $time $filterComplex -c:a copy \"$output\" 2>&1";
-	//$cmdConcat = "$ffmpeg -f concat -i \"$fileConcat\" -codec copy $output 2>&1";
+	echo $cmdBlack = "$ffmpeg -y -f lavfi -i color=color=black:s=480x270:d=1 \"$fileBlack\" 2>&1";
+	echo $cmdEdited = "$ffmpeg -y -i \"/Users/Apple/Sites/ffmpeg/video/12 angry men/original.mp4\" $time $filterComplex -c:a copy \"$fileEdited\" 2>&1";
+	$cmdConcat = "$ffmpeg -f concat -i \"$fileConcat\" -codec copy \"$output\" 2>&1";
 	
-	$output = shell_exec($cmdBlack." && ".$cmdEdited);
+	$output = shell_exec($cmdBlack." && ".$cmdEdited." && ".$cmdConcat);
 		
 	echo "<br><video id='videoPlayer' src='video/" . htmlspecialchars($_GET["movie"]) . "/" . htmlspecialchars($_GET["time"]) . $output_end . ".mp4'  controls></video><br>\n";
 	echo "</center>\n";
