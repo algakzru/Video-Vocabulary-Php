@@ -16,9 +16,9 @@ Video File: original.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.500000
-Scroll Position: 147
-Active Line: 150
-Video Position: 7458
+Scroll Position: 85
+Active Line: 87
+Video Position: 4510
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -86,8 +86,8 @@ Dialogue: 0,0:02:17.28,0:02:18.72,tiantianyinshi,,0,0,0,,那种葱香没有出�
 Dialogue: 0,0:02:18.72,0:02:20.44,tiantianyinshi,,0,0,0,,吃嘴里还辣葱味呢
 Dialogue: 0,0:02:20.44,0:02:21.44,tiantianyinshi,,0,0,0,,证明是生葱的
 Dialogue: 0,0:02:21.90,0:02:22.68,tiantianyinshi,,0,0,0,,葱白嘛
-Dialogue: 0,0:02:22.68,0:02:23.68,tiantianyinshi,,0,0,0,,所以这种技法不成
-Dialogue: 0,0:02:23.68,0:02:24.48,tiantianyinshi,,0,0,0,,那切太碎了
+Dialogue: 0,0:02:22.68,0:02:23.56,tiantianyinshi,,0,0,0,,所以这种技法不成
+Dialogue: 0,0:02:23.56,0:02:24.48,tiantianyinshi,,0,0,0,,那切太碎了
 Dialogue: 0,0:02:24.48,0:02:25.44,tiantianyinshi,,0,0,0,,比如切成葱米了
 Dialogue: 0,0:02:25.44,0:02:26.32,tiantianyinshi,,0,0,0,,葱米不行了
 Dialogue: 0,0:02:26.32,0:02:27.40,tiantianyinshi,,0,0,0,,因为我们配的是鸡丁
@@ -98,8 +98,8 @@ Dialogue: 0,0:02:33.48,0:02:35.16,tiantianyinshi,,0,0,0,,丁配丁
 Dialogue: 0,0:02:35.16,0:02:37.00,tiantianyinshi,,0,0,0,,所以我们这个切的是鸡丁
 Dialogue: 0,0:02:37.00,0:02:38.52,tiantianyinshi,,0,0,0,,所以我们要配豆瓣葱
 Dialogue: 0,0:02:38.52,0:02:39.08,tiantianyinshi,,0,0,0,,明白了
-Dialogue: 0,0:02:39.08,0:02:39.84,tiantianyinshi,,0,0,0,,那就相符了
-Dialogue: 0,0:02:39.84,0:02:40.88,tiantianyinshi,,0,0,0,,主料我们有很多种
+Dialogue: 0,0:02:39.08,0:02:39.24,tiantianyinshi,,0,0,0,,那就相符了
+Dialogue: 0,0:02:39.24,0:02:40.88,tiantianyinshi,,0,0,0,,主料我们有很多种
 Dialogue: 0,0:02:40.88,0:02:42.32,tiantianyinshi,,0,0,0,,你像有的地方用的是什么
 Dialogue: 0,0:02:42.32,0:02:43.48,tiantianyinshi,,0,0,0,,用的鸡腿肉
 Dialogue: 0,0:02:43.48,0:02:44.36,tiantianyinshi,,0,0,0,,像峨嵋酒家
@@ -113,8 +113,8 @@ Dialogue: 0,0:02:53.56,0:02:55.04,tiantianyinshi,,0,0,0,,家里头谁哪儿找
 Dialogue: 0,0:02:55.04,0:02:56.72,tiantianyinshi,,0,0,0,,小公鸡的鸡腿去是不是
 Dialogue: 0,0:02:56.72,0:02:58.56,tiantianyinshi,,0,0,0,,要菜市场还得问
 Dialogue: 0,0:02:58.56,0:02:59.48,tiantianyinshi,,0,0,0,,所以我们用鸡脯肉就可以了
-Dialogue: 0,0:02:59.48,0:03:00.40,tiantianyinshi,,0,0,0,,鸡脯肉也很嫩是吧
-Dialogue: 0,0:03:00.40,0:03:01.88,tiantianyinshi,,0,0,0,,这个弄完之后
+Dialogue: 0,0:02:59.48,0:03:00.92,tiantianyinshi,,0,0,0,,鸡脯肉也很嫩是吧
+Dialogue: 0,0:03:00.92,0:03:01.88,tiantianyinshi,,0,0,0,,这个弄完之后
 Dialogue: 0,0:03:01.88,0:03:03.08,tiantianyinshi,,0,0,0,,我们轻轻地斩一斩
 Dialogue: 0,0:03:03.08,0:03:04.68,tiantianyinshi,,0,0,0,,把它经脉斩一斩
 Dialogue: 0,0:03:04.68,0:03:07.88,tiantianyinshi,,0,0,0,,这样更容易让它便于入味
