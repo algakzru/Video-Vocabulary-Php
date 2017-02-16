@@ -7,6 +7,11 @@ words.push( {word:'ignorant', pinyin:'', id:1994, wordlist_id:'57', withSubs:["X
 words.push( {word:'point out', pinyin:'', id:1995, wordlist_id:'57', withSubs:["XMjQ4OTkyODYwNA=="], withoutSubs:["XMjQ4OTkyNTg0OA=="]} );
 words.push( {word:'from the word go', pinyin:'', id:1996, wordlist_id:'57', withSubs:["XMjQ4OTkyNDU1Mg=="], withoutSubs:["XMjQ4OTkxNzIzNg=="]} );
 words.push( {word:'请教', pinyin:'', id:1997, wordlist_id:'56', withSubs:["XMjQ5MDkwMTA1Ng=="], withoutSubs:["XMjQ4OTE0OTk3Mg=="]} );
+words.push( {word:'薄', pinyin:'', id:1998, wordlist_id:'56', withSubs:["XMjUwOTU2MTI1Mg=="], withoutSubs:["XMjUxMjg4NzMwMA=="]} );
+words.push( {word:'关键', pinyin:'', id:1999, wordlist_id:'56', withSubs:["XMjUxMjg3Nzc1Mg=="], withoutSubs:["XMjUxMjg3NzQ5Mg=="]} );
+words.push( {word:'讲究', pinyin:'', id:2000, wordlist_id:'56', withSubs:["XMjUxMjg4NzYxMg=="], withoutSubs:["XMjUxMjg4NzQ3Ng=="]} );
+words.push( {word:'酒家', pinyin:'', id:2001, wordlist_id:'56', withSubs:["XMjUxNDU5Njk3Mg=="], withoutSubs:["XMjUxNDU5NjQ5Mg=="]} );
+words.push( {word:'滋润', pinyin:'', id:2002, wordlist_id:'56', withSubs:["XMjUxNDYxMDAyMA=="], withoutSubs:["XMjUxNDYwOTc2MA=="]} );
 words.push( {word:'边缘', pinyin:'biānyuán', id:1894, wordlist_id:'50', withSubs:["XMTMxNDA0MTYwMA=="], withoutSubs:["XMTMzNTU0Nzc5Ng=="]} );
 words.push( {word:'标记', pinyin:'biāojì', id:1845, wordlist_id:'50', withSubs:["XMTMxMjE2MTk5Ng=="], withoutSubs:["XMTMzNTg1ODY2OA=="]} );
 words.push( {word:'北极', pinyin:'běijí', id:1914, wordlist_id:'50', withSubs:["XMTMxNDc2MTM0NA=="], withoutSubs:["XMTMzNDgwNTI4MA=="]} );

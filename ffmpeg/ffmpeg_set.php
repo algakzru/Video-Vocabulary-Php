@@ -22,7 +22,7 @@
 	echo "<select id='time' name='time'>\n";
 	echo "<option value='' selected disabled>Select time</option>\n";
 	echo "</select><br>\n";
-    echo "<input type='checkbox' name='isSubs' value='y' checked> Subtitles<br>\n";
+    echo "<input type='checkbox' name='isSubs' value='y'> Subtitles<br>\n";
     
 	
 	echo "</form>\n";

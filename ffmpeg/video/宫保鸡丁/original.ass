@@ -16,9 +16,9 @@ Video File: original.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.500000
-Scroll Position: 85
-Active Line: 87
-Video Position: 4510
+Scroll Position: 146
+Active Line: 148
+Video Position: 7380
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -150,8 +150,8 @@ Dialogue: 0,0:04:05.64,0:04:07.60,tiantianyinshi,,0,0,0,,老爷子是味道拿�
 Dialogue: 0,0:04:07.60,0:04:08.52,tiantianyinshi,,0,0,0,,一说伍钰盛的味道
 Dialogue: 0,0:04:08.52,0:04:09.60,tiantianyinshi,,0,0,0,,把握得非常好
 Dialogue: 0,0:04:09.60,0:04:11.36,tiantianyinshi,,0,0,0,,所以峨嵋酒家这道宫保鸡丁
-Dialogue: 0,0:04:11.36,0:04:12.72,tiantianyinshi,,0,0,0,,受老爷子真传
-Dialogue: 0,0:04:12.72,0:04:13.96,tiantianyinshi,,0,0,0,,我们把这个鸡肉
+Dialogue: 0,0:04:11.36,0:04:12.84,tiantianyinshi,,0,0,0,,受老爷子真传
+Dialogue: 0,0:04:12.84,0:04:13.96,tiantianyinshi,,0,0,0,,我们把这个鸡肉
 Dialogue: 0,0:04:13.96,0:04:15.12,tiantianyinshi,,0,0,0,,放在一个碗里头
 Dialogue: 0,0:04:15.12,0:04:17.92,tiantianyinshi,,0,0,0,,我们开始要给它码味上浆
 Dialogue: 0,0:04:17.92,0:04:19.82,tiantianyinshi,,0,0,0,,我们加点葱姜水
@@ -174,8 +174,8 @@ Dialogue: 0,0:04:43.84,0:04:46.68,tiantianyinshi,,0,0,0,,通过你手   这种�
 Dialogue: 0,0:04:46.68,0:04:49.68,tiantianyinshi,,0,0,0,,把这种葱姜水料酒
 Dialogue: 0,0:04:49.68,0:04:51.56,tiantianyinshi,,0,0,0,,还有我们这个酱油
 Dialogue: 0,0:04:51.56,0:04:52.80,tiantianyinshi,,0,0,0,,给它揉进去
-Dialogue: 0,0:04:52.80,0:04:54.32,tiantianyinshi,,0,0,0,,揉到差不多了
-Dialogue: 0,0:04:54.32,0:04:56.68,tiantianyinshi,,0,0,0,,最后的时候要给它逼进去
+Dialogue: 0,0:04:52.80,0:04:55.20,tiantianyinshi,,0,0,0,,揉到差不多了
+Dialogue: 0,0:04:55.20,0:04:56.68,tiantianyinshi,,0,0,0,,最后的时候要给它逼进去
 Dialogue: 0,0:04:56.68,0:04:58.32,tiantianyinshi,,0,0,0,,看着没  靠这点儿盐了
 Dialogue: 0,0:04:58.32,0:04:59.36,tiantianyinshi,,0,0,0,,这点儿盐很关键  这个估计很重要
 Dialogue: 0,0:04:59.36,0:05:00.44,tiantianyinshi,,0,0,0,,这点盐下去
