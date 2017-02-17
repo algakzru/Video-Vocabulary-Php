@@ -15,10 +15,10 @@ Audio File: original.mp4
 Video File: original.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 1.500000
-Scroll Position: 146
-Active Line: 148
-Video Position: 7380
+Video Zoom Percent: 1.000000
+Scroll Position: 76
+Active Line: 78
+Video Position: 4467
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -106,9 +106,9 @@ Dialogue: 0,0:02:43.48,0:02:44.36,tiantianyinshi,,0,0,0,,像峨嵋酒家
 Dialogue: 0,0:02:44.36,0:02:45.56,tiantianyinshi,,0,0,0,,卖的宫保鸡丁卖得非常好
 Dialogue: 0,0:02:45.56,0:02:47.90,tiantianyinshi,,0,0,0,,但是鸡腿它非常讲究
 Dialogue: 0,0:02:47.90,0:02:49.90,tiantianyinshi,,0,0,0,,用的是小公鸡的鸡腿
-Dialogue: 0,0:02:49.90,0:02:51.00,tiantianyinshi,,0,0,0,,那
-Dialogue: 0,0:02:51.00,0:02:52.36,tiantianyinshi,,0,0,0,,那我们在家里头
-Dialogue: 0,0:02:52.36,0:02:53.56,tiantianyinshi,,0,0,0,,我们不可能了
+Dialogue: 0,0:02:49.90,0:02:51.00,tiantianyinshi,,0,0,0,,是吧
+Dialogue: 0,0:02:51.00,0:02:52.36,tiantianyinshi,,0,0,0,,因为嫩
+Dialogue: 0,0:02:52.36,0:02:53.56,tiantianyinshi,,0,0,0,,在家里头我们不可能了
 Dialogue: 0,0:02:53.56,0:02:55.04,tiantianyinshi,,0,0,0,,家里头谁哪儿找
 Dialogue: 0,0:02:55.04,0:02:56.72,tiantianyinshi,,0,0,0,,小公鸡的鸡腿去是不是
 Dialogue: 0,0:02:56.72,0:02:58.56,tiantianyinshi,,0,0,0,,要菜市场还得问
