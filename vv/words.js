@@ -9,9 +9,13 @@ words.push( {word:'from the word go', pinyin:'', id:1996, wordlist_id:'57', with
 words.push( {word:'请教', pinyin:'', id:1997, wordlist_id:'56', withSubs:["XMjQ5MDkwMTA1Ng=="], withoutSubs:["XMjQ4OTE0OTk3Mg=="]} );
 words.push( {word:'薄', pinyin:'', id:1998, wordlist_id:'56', withSubs:["XMjUwOTU2MTI1Mg=="], withoutSubs:["XMjUxMjg4NzMwMA=="]} );
 words.push( {word:'关键', pinyin:'', id:1999, wordlist_id:'56', withSubs:["XMjUxMjg3Nzc1Mg=="], withoutSubs:["XMjUxMjg3NzQ5Mg=="]} );
-words.push( {word:'讲究', pinyin:'', id:2000, wordlist_id:'56', withSubs:["XMjUxMjg4NzYxMg=="], withoutSubs:["XMjUxMjg4NzQ3Ng=="]} );
+words.push( {word:'讲究', pinyin:'', id:2000, wordlist_id:'56', withSubs:["XMjUxMjg4NzYxMg==","XMjUxNzIwOTExMg=="], withoutSubs:["XMjUxMjg4NzQ3Ng==","XMjUxNDU5NjQ5Mg=="]} );
 words.push( {word:'酒家', pinyin:'', id:2001, wordlist_id:'56', withSubs:["XMjUxNDU5Njk3Mg=="], withoutSubs:["XMjUxNDU5NjQ5Mg=="]} );
 words.push( {word:'滋润', pinyin:'', id:2002, wordlist_id:'56', withSubs:["XMjUxNDYxMDAyMA=="], withoutSubs:["XMjUxNDYwOTc2MA=="]} );
+words.push( {word:'嫩', pinyin:'', id:2003, wordlist_id:'56', withSubs:["XMjUxNzIwODM4NA=="], withoutSubs:["XMjUxNDU5NjQ5Mg=="]} );
+words.push( {word:'斩', pinyin:'', id:2004, wordlist_id:'56', withSubs:["XMjUxNzIwNjMwMA=="], withoutSubs:["XMjUxNDYwOTc2MA=="]} );
+words.push( {word:'说白了', pinyin:'', id:2005, wordlist_id:'56', withSubs:["XMjUxNzIwNTg5Mg=="], withoutSubs:[]} );
+words.push( {word:'好歹', pinyin:'', id:2006, wordlist_id:'56', withSubs:["XMjUxNjM0MTA5Mg=="], withoutSubs:[]} );
 words.push( {word:'边缘', pinyin:'biānyuán', id:1894, wordlist_id:'50', withSubs:["XMTMxNDA0MTYwMA=="], withoutSubs:["XMTMzNTU0Nzc5Ng=="]} );
 words.push( {word:'标记', pinyin:'biāojì', id:1845, wordlist_id:'50', withSubs:["XMTMxMjE2MTk5Ng=="], withoutSubs:["XMTMzNTg1ODY2OA=="]} );
 words.push( {word:'北极', pinyin:'běijí', id:1914, wordlist_id:'50', withSubs:["XMTMxNDc2MTM0NA=="], withoutSubs:["XMTMzNDgwNTI4MA=="]} );
