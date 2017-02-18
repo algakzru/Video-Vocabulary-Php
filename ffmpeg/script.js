@@ -18,6 +18,19 @@ function refreshMoviesList(moviePath, movieName) {
     xmlhttp.send();
 }
 
+function video2Db(movieName, fileName) {
+	var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        	alert(this.responseText);
+        	returnObj = JSON.parse(this.responseText);
+//        	alert(returnObj.result);
+        }
+    };
+    xmlhttp.open("GET", "ffmpeg_video2db.php?movieName=" + movieName + "&fileName=" + fileName, true);
+    xmlhttp.send();
+}
+
 function validateForm() {
     var selectedMovie = document.getElementById("movie").value;
     if (selectedMovie == "") {

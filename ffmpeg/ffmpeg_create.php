@@ -1,27 +1,34 @@
 <?php
-    header('Content-type: text/html; charset=utf-8');
-    echo "<center>\n";
 	
-	echo "<button type='button' onclick='location.href = \"ffmpeg_set.php\";'>Back</button>\n";
-	echo "<hr width=300>\n";
-
 	if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-		$movie = iconv("UTF-8", "gb2312", $_GET["movie"]);
+		header('Content-type: text/html; charset=utf-8');
+    	$movie = iconv("UTF-8", "gb2312", $_GET["movie"]);
 		$moviesPath  = 'E:/git_workspace/Video-Vocabulary-Php/ffmpeg/video';
 	} else {
-		$movie = $_GET["movie"];
+		header('Content-type: text/html; charset=utf-8');
+    	$movie = $_GET["movie"];
 		$moviesPath  = '/Users/Apple/Sites/ffmpeg/video';
 	}
+    echo "<center>\n";
+
 	$ffmpeg = getcwd() . "/ffmpeg";
 	$ffprobe = getcwd() . "/ffprobe";
 	$input = str_replace("\\", "/", getcwd()) . "/video/" . $movie . "/original.mp4";
-	$subtitleFile = str_replace("\\", "/", getcwd()) . "/video/" . $movie . "/edited.ass";
-	$output_end = ($_GET["isSubs"] == "Yes" ? "_" . urldecode($_GET["word"]) : "");
-	$output_ext = ($_GET["isThumb"] == "Yes" ? ".png" : ".mp4");
-	$output = getcwd() . "/video/" . $movie . "/" . urldecode($_GET["time"]) . $output_end . $output_ext;
+// 	$subtitleFile = "video/edited.ass";
+	$subtitleFile = "video/" . $movie . "/edited.ass";
+	$outputEndW = ($_GET["isSubs"] == "Yes" ? "_" . iconv("UTF-8", "gb2312", $_GET["word"]) : "");
+	$outputEndM = ($_GET["isSubs"] == "Yes" ? "_" . $_GET["word"] : "");
+	$outputExt = ($_GET["isThumb"] == "Yes" ? ".png" : ".mp4");
+	$outputFilenameW = $_GET["time"] . $outputEndW . $outputExt;
+	$outputFilenameM = $_GET["time"] . $outputEndM . $outputExt;
+	$output = getcwd() . "/video/" . $movie . "/" . $outputFilenameW;
 	$fileBlack = getcwd() . "/video/" . $movie . "/black.mp4";
 	$fileEdited = getcwd() . "/video/" . $movie . "/edited.mp4";
 	$fileConcat = getcwd() . "/video/" . $movie . "/concat.txt";
+	
+	echo "<button type='button' onclick='location.href = \"ffmpeg_set.php\";'>Back</button>\n";
+	echo "<button type='button' onclick='video2Db(\"" . $_GET["movie"] . "\",\"$outputFilenameM\");'>video2Db</button>\n";
+	echo "<hr width=300>\n";
 	
 	$time = "";
 	$timeFrom = substr(htmlspecialchars($_GET["time"]), 0, strpos(htmlspecialchars($_GET["time"]), "_"));
@@ -35,7 +42,7 @@
 		echo $cmd = "$ffmpeg -y -i \"$input\" -ss $timeFrom -vframes 1 $output 2>&1";
 		echo "<br>";
 		$output = shell_exec($cmd);
-		echo "<br><img src='video/" . $_GET["movie"] . "/" . $_GET["time"] . $output_end . $output_ext. "'><br>\n";
+		echo "<br><img src='video/" . $_GET["movie"] . "/" . $outputFilenameM. "'><br>\n";
 	} else {
 		
 		putenv("FC_CONFIG_DIR=".getcwd());
@@ -62,9 +69,9 @@
 			fclose($subtitleFileEdited);
 			fclose($subtitleFileOriginal);
 			if ($filterComplexContent == "") {
-				$filterComplexContent .= "[0:v] ass=$subtitleFile";
+				$filterComplexContent .= "[0:v] ass='$subtitleFile'";
 			} else {
-				$filterComplexContent .= " [withoutSubs]; [withoutSubs] ass=$subtitleFile";
+				$filterComplexContent .= " [withoutSubs]; [withoutSubs] ass='$subtitleFile'";
 			}
 		}
 	
@@ -73,14 +80,20 @@
 			$filterComplex .= "-filter_complex \"$filterComplexContent\"";
 		}
 	
+		if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+			$cmdCurrentDir = "cd 2>&1";
+		} else {
+			$cmdCurrentDir = "pwd 2>&1";
+		}
 		echo $cmdBlack = "$ffmpeg -y -f lavfi -i color=color=black:s=480x270:d=1 \"$fileBlack\" 2>&1";
 		echo $cmdEdited = "$ffmpeg -y -i \"$input\" $time $filterComplex -c:a copy \"$fileEdited\" 2>&1";
 		$cmdConcat = "$ffmpeg -f concat -i \"$fileConcat\" -codec copy \"$output\" 2>&1";
 	
-		$output = shell_exec($cmdBlack." && ".$cmdEdited." && ".$cmdConcat);
-		echo "<br><video id='videoPlayer' src='video/" . $_GET["movie"] . "/" . $_GET["time"] . $output_end . $output_ext. "'  controls></video><br>\n";
+		$output = shell_exec($cmdCurrentDir." && ".$cmdBlack." && ".$cmdEdited." && ".$cmdConcat);
+		echo "<br><video id='videoPlayer' src='video/" . $_GET["movie"] . "/" . $outputFilenameM. "'  controls></video><br>\n";
 	}
 	echo "</center>\n";
 	echo "<pre>$output</pre>\n";
 	echo "<script src='notifications.js' type='text/javascript'></script>\n";
+	echo "<script src='script.js' type='text/javascript'></script>\n";
 ?>
