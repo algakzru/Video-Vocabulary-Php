@@ -1,4 +1,4 @@
-function refreshMoviesList(movieName) {
+function refreshMoviesList(moviePath, movieName) {
 	var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -14,7 +14,7 @@ function refreshMoviesList(movieName) {
             }
         }
     };
-    xmlhttp.open("GET", "ffmpeg_refresh.php?path=/Users/Apple/Sites/ffmpeg/video/" + movieName + "/videos.txt", true);
+    xmlhttp.open("GET", "ffmpeg_refresh.php?path=" + moviePath + "/" + movieName + "/videos.txt", true);
     xmlhttp.send();
 }
 
@@ -30,4 +30,8 @@ function validateForm() {
         alert("Select time");
         return false;
     }
+	
+	if (document.getElementById("isSubs").checked) {
+		document.getElementById('isSubsHidden').disabled = true;
+	}
 }
