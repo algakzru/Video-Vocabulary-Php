@@ -24,6 +24,11 @@ ul.onclick = function(event) {
 	onClick(target.id.substring(3), true);
 };
 
+function openInNewTab(url) {
+	var win = window.open(url, '_blank');
+	win.focus();
+}
+
 function onClick(index, hanzi) {
 	//document.getElementById('divTitle').innerHTML = words[index].word;
 	var text = "<select onchange='selectVideo(" + index + ", this.value)'>";
