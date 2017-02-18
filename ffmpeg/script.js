@@ -34,4 +34,8 @@ function validateForm() {
 	if (document.getElementById("isSubs").checked) {
 		document.getElementById('isSubsHidden').disabled = true;
 	}
+	
+	if (document.getElementById("isThumb").checked) {
+		document.getElementById('isThumbHidden').disabled = true;
+	}
 }

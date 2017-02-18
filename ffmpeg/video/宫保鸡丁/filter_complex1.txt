@@ -1,1 +1,0 @@
-[0:v] delogo=x=90:y=225:w=230:h=20 [delogoSubs]; [delogoSubs] delogo=x=30:y=20:w=61:h=26 [delogoCCTV]; [delogoCCTV] delogo=x=375:y=24:w=75:h=16 [delogoCNTV]; [delogoCNTV] delogo=x=373:y=167:w=55:h=83
