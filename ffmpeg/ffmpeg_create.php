@@ -16,15 +16,20 @@
 	$input = str_replace("\\", "/", getcwd()) . "/video/" . $movie . "/original.mp4";
 // 	$subtitleFile = "video/edited.ass";
 	$subtitleFile = "video/" . $movie . "/edited.ass";
+	$fileBlack = getcwd() . "/video/" . $movie . "/black.mp4";
+	$fileEdited = getcwd() . "/video/" . $movie . "/edited.mp4";
+	$fileConcat = getcwd() . "/video/" . $movie . "/concat.txt";
 	$outputEndW = ($_GET["isSubs"] == "Yes" ? "_" . iconv("UTF-8", "gb2312", $_GET["word"]) : "");
 	$outputEndM = ($_GET["isSubs"] == "Yes" ? "_" . $_GET["word"] : "");
 	$outputExt = ($_GET["isThumb"] == "Yes" ? ".png" : ".mp4");
 	$outputFilenameW = $_GET["time"] . $outputEndW . $outputExt;
 	$outputFilenameM = $_GET["time"] . $outputEndM . $outputExt;
-	$output = getcwd() . "/video/" . $movie . "/" . $outputFilenameW;
-	$fileBlack = getcwd() . "/video/" . $movie . "/black.mp4";
-	$fileEdited = getcwd() . "/video/" . $movie . "/edited.mp4";
-	$fileConcat = getcwd() . "/video/" . $movie . "/concat.txt";
+	
+	if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+		$output = getcwd() . "/video/" . $movie . "/" . $outputFilenameW;
+	} else {
+		$output = getcwd() . "/video/" . $movie . "/" . $outputFilenameM;
+	}
 	
 	echo "<button type='button' onclick='location.href = \"ffmpeg_set.php\";'>Back</button>\n";
 	echo "<button type='button' onclick='video2Db(\"" . $_GET["movie"] . "\",\"$outputFilenameM\");'>video2Db</button>\n";

@@ -18,7 +18,11 @@
 	foreach ($movies as $key => $movie)  {
 		if (!in_array($movie, array(".","..")))  { 
 			if (is_dir($moviesPath . DIRECTORY_SEPARATOR . $movie))  { 
-				$movieUtf = iconv("gb2312", "UTF-8", $movie);
+				if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+					$movieUtf = iconv("gb2312", "UTF-8", $movie);
+				} else {
+					$movieUtf = $movie;
+				}
 				echo "<option value='" . $movieUtf . "'>" . $movieUtf . "</option>\n";
 			}
 		} 
