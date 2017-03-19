@@ -19,6 +19,7 @@ words.push( {word:'好歹', pinyin:'', id:2006, wordlist_id:'56', withSubs:["XMj
 words.push( {word:'customary', pinyin:'', id:2007, wordlist_id:'57', withSubs:["XMjY0NjI3NzM1Ng=="], withoutSubs:[]} );
 words.push( {word:'preliminary', pinyin:'', id:2008, wordlist_id:'57', withSubs:["XMjY0NjI3NzM1Ng=="], withoutSubs:[]} );
 words.push( {word:'mandatory', pinyin:'', id:2009, wordlist_id:'57', withSubs:["XMjY0NzEyMjc5Mg=="], withoutSubs:[]} );
+words.push( {word:'miserable', pinyin:'', id:2010, wordlist_id:'57', withSubs:["XMjY0ODA4MzE0OA=="], withoutSubs:[]} );
 words.push( {word:'边缘', pinyin:'biānyuán', id:1894, wordlist_id:'50', withSubs:["XMTMxNDA0MTYwMA=="], withoutSubs:["XMTMzNTU0Nzc5Ng=="]} );
 words.push( {word:'标记', pinyin:'biāojì', id:1845, wordlist_id:'50', withSubs:["XMTMxMjE2MTk5Ng=="], withoutSubs:["XMTMzNTg1ODY2OA=="]} );
 words.push( {word:'北极', pinyin:'běijí', id:1914, wordlist_id:'50', withSubs:["XMTMxNDc2MTM0NA=="], withoutSubs:["XMTMzNDgwNTI4MA=="]} );

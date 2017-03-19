@@ -39,11 +39,7 @@ function onClick(index, hanzi) {
 	document.getElementById('selectVideos').innerHTML = text;
     document.getElementById("editbox").style.display = "none";
 	document.getElementById("videobox").style.display = "block";
-    if (document.getElementById('cbSubtitles').checked) {
-        document.getElementById("player").src = "http://player.youku.com/embed/" + words[index].withSubs[ 0 ];
-    } else {
-        document.getElementById("player").src = "http://player.youku.com/embed/" + words[index].withoutSubs[ 0 ];
-    }
+    document.getElementById("videoboxPlayer").src = "http://player.youku.com/embed/" + words[index].withSubs[ 0 ];
 	document.getElementById("btnDelete").onclick = function() { deleteWordConfirmation( words[index].word, words[index].id ) } ;
 	document.getElementById("btnEdit").onclick = function() { requestTempRefresh(words[index].id); }
 }
@@ -55,9 +51,17 @@ function requestTempRefresh(wordId) {
             //alert(this.responseText);
             returnObj = JSON.parse(this.responseText);
             //alert(returnObj.location);
+            youkuIds = returnObj.youkuIds;
             
             document.getElementById("videobox").style.display = "none";
             document.getElementById("editbox").style.display = "block";
+            document.getElementById("editboxPlayer").style.display = "none";
+            var text = "<select onchange='selectVideo(this.value)'>";
+            for (i=0; i<youkuIds.length; i++) {
+                text += "<option value=" + youkuIds[i] + " " + (i==0?"selected":"") + ">" + youkuIds[i] + "</option>";
+            }
+            text += "</select>";
+            document.getElementById('editboxVideos').innerHTML = text;
             document.getElementById("btnCancel").onclick = function() { document.getElementById("editbox").style.display = "none"; }
             document.getElementById("btnSave").onclick = function() {
                 saveWord(wordId, document.getElementById("inputWord").value, document.getElementById("selectWordlist").value); }
